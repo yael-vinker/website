@@ -169,7 +169,7 @@
                 <h1 class="portfolio-modal-title mb-4 text-center">Word-As-Image for Semantic Typography</h1>
                 <p class="font-italic mb-3">Shir Iluz*, <b>Yael Vinker*</b>, Amir Hertz, Daniel Berio, Daniel Cohen-Or, Ariel Shamir</p>
                 <div class="video-container mb-4">
-                  <iframe width="560" height="315" src="img/portfolio/word-as-image-video.mp4" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="img/portfolio/word-as-image-video.mp4"></iframe>
                 </div>
                 <h6 class="large font-weight-bold"><highlight>Abstract: </highlight></h6>
                 <p class="mb-3">A word-as-image is a semantic typography technique where a word illustration presents a visualization of the meaning of the word, while also preserving its readability. We present a method to create word-as-image illustrations automatically. This task is highly challenging as it requires semantic understanding of the word and a creative idea of where and how to depict these semantics in a visually pleasing and legible manner. We rely on the remarkable ability of recent large pretrained language-vision models to distill textual concepts visually. We target simple, concise, black-and-white designs that convey the semantics clearly. We deliberately do not change the color or texture of the letters and do not use embellishments. Our method optimizes the outline of each letter to convey the desired concept, guided by a pretrained Stable Diffusion model. We incorporate additional loss terms to ensure the legibility of the text and the preservation of the style of the font. We show high quality and engaging results on numerous examples and compare to alternative techniques.
@@ -222,7 +222,7 @@
                 <h1 class="portfolio-modal-title mb-4 text-center">Attend-and-Excite: Attention-Based Semantic Guidance for Text-to-Image Diffusion Models</h1>
                 <p class="font-italic mb-3">Hila Chefer*, Yuval Alaluf*, <b>Yael Vinker</b>, Lior Wolf, Daniel Cohen-Or</p>
                 <div class="video-container mb-4">
-                  <iframe width="560" height="315" src="img/portfolio/attend_and_excite_vid.mp4" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="img/portfolio/attend_and_excite_vid.mp4"></iframe>
                 </div>
                 <h6 class="large font-weight-bold"><highlight>Abstract: </highlight></h6>
                 <p class="mb-3">Recent text-to-image generative models have demonstrated an unparalleled ability to generate diverse and creative imagery guided by a target text prompt. While revolutionary, current state-of-the-art diffusion models may still fail in generating images that fully convey the semantics in the given text prompt. We analyze the publicly available Stable Diffusion model and assess the existence of catastrophic neglect, where the model fails to generate one or more of the subjects from the input prompt. Moreover, we find that in some cases the model also fails to correctly bind attributes (e.g. colors) to their corresponding subjects. To help mitigate these failure cases, we introduce the concept of Generative Semantic Nursing (GSN), where we seek to intervene in the generative process on the fly during inference time to improve the faithfulness of the generated images. Using an attention- based formulation of GSN, dubbed Attend-and-Excite, we guide the model to refine the cross-attention units to attend to all subject tokens in the text prompt and strengthen — or excite — their activations, encouraging the model to generate all subjects described in the text prompt. We compare our approach to alternative approaches and demonstrate that it conveys the desired concepts more faithfully across a range of text prompts.
@@ -268,7 +268,7 @@
                 <h1 class="portfolio-modal-title mb-4 text-center">CLIPascene: Scene Sketching with Different Types and Levels of Abstraction</h1>
                 <p class="font-italic mb-3"><b>Yael Vinker</b>, Yuval Alaluf, Daniel Cohen-Or, Ariel Shamir</p>
                 <div class="video-container mb-4">
-                  <iframe width="560" height="315" src="img/portfolio/clipascene_video1.mp4" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="img/portfolio/clipascene_video1.mp4"></iframe>
                 </div>
                 <h6 class="large font-weight-bold"><highlight>Abstract: </highlight></h6>
                 <p class="mb-3">In this paper, we present a method for converting a given scene image into a sketch using different types and multiple levels of abstraction. We distinguish between two types of abstraction.
@@ -319,7 +319,7 @@
                 <h1 class="portfolio-modal-title mb-4 text-center">CLIPasso: Semantically-Aware Object Sketching</h1>
                 <p class="font-italic mb-3"><b>Yael Vinker</b>, Ehsan Pajouheshgar, Jessica Y. Bo, Roman Bachmann, Amit Haim Bermano, Daniel Cohen-Or, Amir Zamir, Ariel Shamir</p>
                 <div class="video-container mb-4">
-                  <iframe width="560" height="315" src="img/portfolio/clipasso_vid.mp4" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="img/portfolio/clipasso_vid.mp4"></iframe>
                 </div>
                 <h6 class="large font-weight-bold"><highlight>Abstract: </highlight></h6>
                 <p class="mb-3">Abstraction is at the heart of sketching due to the simple and minimal nature of line drawings. Abstraction entails identifying the essential visual properties of an object or scene, which requires semantic understanding and prior knowledge of high-level concepts. Abstract depictions are therefore challenging for artists, and even more so for machines. We present an object sketching method that can achieve different levels of abstraction, guided by geometric and semantic simplifications. While sketch generation methods often rely on explicit sketch datasets for training, we utilize the remarkable ability of CLIP (Contrastive-Language-Image-Pretraining) to distill semantic concepts from sketches and images alike. We define a sketch as a set of Bézier curves and use a differentiable rasterizer to optimize the parameters of the curves directly with respect to a CLIP-based perceptual loss. The abstraction degree is controlled by varying the number of strokes. The generated sketches demonstrate multiple levels of abstraction while maintaining recognizability, underlying structure, and essential visual components of the subject drawn. </p>
