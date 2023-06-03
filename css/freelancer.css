@@ -620,6 +620,7 @@ pre code {
 }
 
 .container {
+  z-index:1; 
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -7577,7 +7578,7 @@ button.bg-dark:focus {
 
 .perosnal-info{
   margin-top: 30px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .perosnal-info2{
@@ -9956,10 +9957,16 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 135%;
 }
 
+.portfolio-authors {
+  font-style: italic;
+  text-align: center;
+  font-size: 90%;
+}
+
 .portfolio-subtitle {
   text-align: center;
   color: var(--gray);
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 115%;
 }
 
