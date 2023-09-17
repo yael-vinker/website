@@ -65,13 +65,23 @@
 
       
       <div class="row mb-6">
+
+        <div class="col-md-10 col-lg-10">
+          <div class="portfolio-item portfolio-item-research mx-auto" data-toggle="modal" data-target="#InspirationTree">
+            <img class="img-fluid" src="img/portfolio/inspirationTree_teaser.jpg" alt="">
+          </div>
+          <div class="portfolio-label">Concept Decomposition for Visual Exploration and Inspiration</div>
+          <div class="portfolio-authors"><b>Yael Vinker</b>, Andrey Voynov, Daniel Cohen-Or, Ariel Shamir</div>
+          <div class="portfolio-subtitle">SIGGRAPH Asia 2023</div>
+        </div>
+
         <div class="col-md-10 col-lg-10">
           <div class="portfolio-item portfolio-item-research mx-auto" data-toggle="modal" data-target="#wordasimage">
             <img class="img-fluid" src="img/portfolio/word-as-image_teaser.png" alt="">
           </div>
           <div class="portfolio-label">Word-As-Image for Semantic Typography</div>
           <div class="portfolio-authors">Shir Iluz*, <b>Yael Vinker*</b>, Amir Hertz, Daniel Berio, Daniel Cohen-Or, Ariel Shamir</div>
-          <div class="portfolio-subtitle">SIGGRAPH 2023</div>
+          <div class="portfolio-subtitle">SIGGRAPH 2023, <highlight>Honorable Mention Award</highlight></div>
         </div>
 
         <div class="row mb-6">
@@ -93,7 +103,7 @@
           </div>
           <div class="portfolio-label">CLIPascene: Scene Sketching with Different Types <br> and Levels of Abstraction</div>
           <div class="portfolio-authors"><b>Yael Vinker</b>, Yuval Alaluf, Daniel Cohen-Or, Ariel Shamir</div>
-          <!-- <div class="portfolio-subtitle">SIGGRAPH 2022, <highlight>Best Paper Award</highlight></div> -->
+          <div class="portfolio-subtitle">ICCV 2023, <highlight>Oral Presentation</highlight></div>
         </div>
         
 
@@ -144,6 +154,55 @@
 
     </div>
   </section>
+
+
+
+
+<div class="portfolio-modal modal fade" id="InspirationTree" tabindex="-1" role="dialog" aria-labelledby="InspirationTree" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times fa-xs"></i>
+          </span>
+        </button>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <h1 class="portfolio-modal-title mb-4 text-center">Concept Decomposition for Visual Exploration and Inspiration</h1>
+                <p class="font-italic mb-3"><b>Yael Vinker</b>, Andrey Voynov, Daniel Cohen-Or, Ariel Shamir</p>
+                
+                <div class="video-container mb-4">
+                  <video width="100%" height="auto" id="tree" controls>
+                    <source src="img/portfolio/inspirationTree_gif.mp4"
+                    type="video/mp4">
+                  </video>
+                </div>
+
+                <h6 class="large font-weight-bold"><highlight>Abstract: </highlight></h6>
+                <p class="mb-3">A creative idea is often born from transforming, combining, and modifying ideas from existing visual examples capturing various concepts. However, one cannot simply copy the concept as a whole, and inspiration is achieved by examining certain aspects of the concept. Hence, it is often necessary to separate a concept into different aspects to provide new perspectives. In this paper, we propose a method to decompose a visual concept, represented as a set of images, into different visual aspects encoded in a hierarchical tree structure. We utilize large vision-language models and their rich latent space for concept decomposition and generation. Each node in the tree represents a sub-concept using a learned vector embedding injected into the latent space of a pretrained text-to-image model. We use a set of regularizations to guide the optimization of the embedding vectors encoded in the nodes to follow the hierarchical structure of the tree. Our method allows to explore and discover new concepts derived from the original one. The tree provides the possibility of endless visual sampling at each node, allowing the user to explore the hidden sub-concepts of the object of interest. The learned aspects in each node can be combined within and across trees to create new visual ideas, and can be used in natural language sentences to apply such aspects to new designs.
+                 </p>
+                <div class="large mb-2 font-weight-bold">
+                  <a href="https://inspirationtree.github.io/inspirationtree/" target="_blank">
+                    > <highlight>Project website</highlight>
+                  </a>
+                </div>
+
+                <div class="large mb-2 font-weight-bold">
+                  <a href="https://arxiv.org/abs/2305.18203" target="_blank">
+                    > <highlight>Paper</highlight>
+                  </a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="portfolio-modal modal fade" id="wordasimage" tabindex="-1" role="dialog" aria-labelledby="wordasimage" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
