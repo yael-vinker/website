@@ -74,14 +74,17 @@ html {
   --purple: #6f42c1;
   --pink: rgb(68, 136, 209);
   --lightpink:rgb(199 219 242);
+  --lightblue:rgb(176, 226, 241);
+  
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #28a745;
-  --teal: #1abc9c;
+  --teal: #97e7d7;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
+  --gray-light: #e1e6eb;
   --gray-dark: #343a40;
   --black: #000000;
   --primary: #ffffff;
@@ -9966,7 +9969,7 @@ a.text-dark:hover, a.text-dark:focus {
 .portfolio-subtitle {
   text-align: center;
   color: var(--gray);
-  /*font-weight: bold;*/
+  font-weight: bold;
   font-size: 115%;
 }
 
@@ -10072,6 +10075,13 @@ form .row:first-child .floating-label-form-group {
 highlight {
   background: linear-gradient(to top, var(--lightpink) 50%, transparent 50%);
 }
+highlight-award {
+    background: linear-gradient(to top, var(--lightblue) 50%, transparent 50%);
+  }
+
+highlight-secondary {
+    background: linear-gradient(to top, var(--gray-light) 50%, transparent 50%);
+  }
 
 fulllight {
   background: var(--lightpink);
