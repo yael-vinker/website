@@ -10123,3 +10123,80 @@ body { padding: 0; margin: 0 }
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-mobile-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+
+#pot {
+  bottom: 15%;
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 5s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  50% { 
+    left: calc(100% - 100px); 
+   }
+  100% {
+    left: 0;     
+  }
+}
+
+@keyframes move-around1 {
+  0% {
+    transform: translate(70%);
+  }
+}
+
+.cross1 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around1 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+@keyframes move-around2 {
+  0% {
+    /*transform: translate(0%, 70%);*/
+    transform: translate(40%);
+  }
+}
+
+.cross2 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around2 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+@keyframes move-around3 {
+  0% {
+    /*transform: translate(0%, 70%);*/
+    transform: translate(-70%);
+  }
+}
+
+.cross3 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around3 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+@keyframes move-around4 {
+  0% {
+    /*transform: translate(0%, 70%);*/
+    transform: translate(-40%);
+  }
+}
+
+.cross4 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around4 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+
