@@ -75,6 +75,7 @@ html {
   --pink: rgb(68, 136, 209);
   --lightpink:rgb(199 219 242);
   --lightblue:rgb(176, 226, 241);
+  --lightname:rgb(250, 235, 173);
   
   --red: #dc3545;
   --orange: #fd7e14;
@@ -9968,7 +9969,7 @@ a.text-dark:hover, a.text-dark:focus {
 .portfolio-authors {
   font-style: italic;
   text-align: center;
-  font-size: 90%;
+  font-size: 100%;
 }
 
 .portfolio-subtitle {
@@ -10080,6 +10081,10 @@ form .row:first-child .floating-label-form-group {
 highlight {
   background: linear-gradient(to top, var(--lightpink) 50%, transparent 50%);
 }
+highlight-name {
+  background: linear-gradient(to top, var(--lightname) 50%, transparent 50%);
+}
+
 highlight-award {
     background: linear-gradient(to top, var(--lightblue) 50%, transparent 50%);
   }
