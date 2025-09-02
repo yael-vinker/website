@@ -5157,6 +5157,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex: 1;
 }
 
+li {
+  margin-bottom: 12px; /* adjust value for more/less space */
+  line-height: 1.25; /* smaller = tighter, larger = looser */
+}
+
 .list-group {
   display: flex;
   flex-direction: column;
