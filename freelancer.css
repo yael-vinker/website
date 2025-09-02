@@ -74,14 +74,18 @@ html {
   --purple: #6f42c1;
   --pink: rgb(68, 136, 209);
   --lightpink:rgb(199 219 242);
+  --lightblue:rgb(176, 226, 241);
+  --lightname:rgb(250, 235, 173);
+  
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #28a745;
-  --teal: #1abc9c;
+  --teal: #97e7d7;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
+  --gray-light: #e1e6eb;
   --gray-dark: #343a40;
   --black: #000000;
   --primary: #ffffff;
@@ -491,7 +495,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 0.125rem solid rgba(0, 0, 0, 0.1);
+  border-top: 0.125rem solid rgba(0, 0, 0, 1);
 }
 
 small,
@@ -552,6 +556,11 @@ mark,
 
 .img-fluid {
   max-width: 100%;
+  height: auto;
+}
+
+.img-fluid2 {
+  max-width: 22%;
   height: auto;
 }
 
@@ -620,6 +629,7 @@ pre code {
 }
 
 .container {
+  z-index:1; 
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -5147,6 +5157,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex: 1;
 }
 
+li {
+  margin-bottom: 12px; /* adjust value for more/less space */
+  line-height: 1.25; /* smaller = tighter, larger = looser */
+}
+
 .list-group {
   display: flex;
   flex-direction: column;
@@ -7576,8 +7591,8 @@ button.bg-dark:focus {
 }
 
 .perosnal-info{
-  margin-top: 30px;
-  font-size: 1.3rem;
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
 .perosnal-info2{
@@ -9956,6 +9971,12 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 135%;
 }
 
+.portfolio-authors {
+  font-style: italic;
+  text-align: center;
+  font-size: 100%;
+}
+
 .portfolio-subtitle {
   text-align: center;
   color: var(--gray);
@@ -10065,6 +10086,17 @@ form .row:first-child .floating-label-form-group {
 highlight {
   background: linear-gradient(to top, var(--lightpink) 50%, transparent 50%);
 }
+highlight-name {
+  background: linear-gradient(to top, var(--lightname) 50%, transparent 50%);
+}
+
+highlight-award {
+    background: linear-gradient(to top, var(--lightblue) 50%, transparent 50%);
+  }
+
+highlight-secondary {
+    background: linear-gradient(to top, var(--gray-light) 50%, transparent 50%);
+  }
 
 fulllight {
   background: var(--lightpink);
@@ -10101,3 +10133,80 @@ body { padding: 0; margin: 0 }
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-mobile-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+
+#pot {
+  bottom: 15%;
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 5s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  50% { 
+    left: calc(100% - 100px); 
+   }
+  100% {
+    left: 0;     
+  }
+}
+
+@keyframes move-around1 {
+  0% {
+    transform: translate(70%);
+  }
+}
+
+.cross1 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around1 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+@keyframes move-around2 {
+  0% {
+    /*transform: translate(0%, 70%);*/
+    transform: translate(40%);
+  }
+}
+
+.cross2 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around2 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+@keyframes move-around3 {
+  0% {
+    /*transform: translate(0%, 70%);*/
+    transform: translate(-70%);
+  }
+}
+
+.cross3 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around3 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+@keyframes move-around4 {
+  0% {
+    /*transform: translate(0%, 70%);*/
+    transform: translate(-40%);
+  }
+}
+
+.cross4 {
+  /*animation: move-around 5s infinite;*/
+  animation: move-around4 2s;
+  /*stroke: #262d3d;
+  stroke-width: 10px;*/
+}
+
+
