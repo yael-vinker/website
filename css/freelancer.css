@@ -564,6 +564,62 @@ mark,
   height: auto;
 }
 
+/* Make wrapper center in its column (all screens) */
+.img-fluid-main {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;      /* center wrapper */
+  text-align: center;  /* safe, but not relied on */
+}
+
+/* Hover images: same width and centered */
+.portrait {
+  display: block;
+  width: 65%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;  /* smoother & longer fade */
+}
+
+.portrait.back {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;  /* must match */
+}
+
+.img-fluid-main:hover .portrait.front { opacity: 0; }
+.img-fluid-main:hover .portrait.back  { opacity: 1; }
+
+/* Bootstrap 4 mobile stack: ensure full-width columns */
+@media (max-width: 767.98px) {
+  /* Let both columns span full width on phones */
+  .col-12, .col-md-5, .col-md-7 { max-width: 100%; flex: 0 0 100%; }
+
+  /* Center the image wrapper at your preferred mobile size */
+  .img-fluid-main { max-width: 90%; margin-left: auto; margin-right: auto; }
+
+  /* IMPORTANT: stop the custom .element rule from narrowing columns */
+  .masthead .element { width: auto; margin: 0; padding: 0; }
+}
+
+.portrait-wrapper {
+  margin-bottom: 3%;  /* adjust as needed */
+}
+
+
+.img-wrapper {
+  margin-bottom: 20px;  /* space below image */
+}
+
+.social-links {
+  margin-bottom: 15px;  /* space below links */
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -630,11 +686,20 @@ pre code {
 
 .container {
   z-index:1; 
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    width: 95% !important;
+    max-width: 95% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -687,9 +752,13 @@ pre code {
   padding-left: 0;
 }
 
-.element {
-  margin:0 3%;
-  width:20%;
+
+
+/* Safe override just for the top section */
+.masthead .element {
+  margin: 0;          /* no side margins */
+  width: auto;        /* let Bootstrap control column width */
+  padding: 0;         /* optional: keep it tight */
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
@@ -10209,4 +10278,163 @@ body { padding: 0; margin: 0 }
   stroke-width: 10px;*/
 }
 
+
+.canvas-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fd79a8);
+  border-radius: 20px 20px 0 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.brush-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.brush-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.brush-btn.active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.brush-btn.pen {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.brush-btn.marker {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+}
+
+.brush-btn.rainbow {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+  color: white;
+}
+
+.brush-btn.wiggle {
+  background: linear-gradient(135deg, #ff7675, #fd79a8);
+  color: white;
+}
+
+.brush-btn.spray {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+}
+
+.brush-btn.fountain {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+}
+
+.canvas-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fbf8f3;
+  position: relative;
+}
+
+.canvas-wrapper::before {
+  content: '✨ Draw something!:) ✨';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #bbb;
+  font-size: 1.2rem;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.canvas-wrapper.drawing::before {
+  opacity: 0;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.clear-btn:hover {
+  background: #ff5252;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.instructions {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
 
