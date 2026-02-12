@@ -592,7 +592,7 @@ mark,
   transition: opacity 0.5s ease-in-out;  /* must match */
 }
 
-.img-fluid-main:hover .portrait.front { opacity: 0; }
+.img-fluid-main:hover .portrait.front { opacity: 1; }
 .img-fluid-main:hover .portrait.back  { opacity: 1; }
 
 /* Bootstrap 4 mobile stack: ensure full-width columns */
